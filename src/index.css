@@ -1,0 +1,187 @@
+/******************* CSS GENERICO *******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-image: url(/public/img/footer-bg.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: bottom;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(10%);
+  width: 500px;
+  height: 500px;
+  background: url('img/dc-logo-bg.png');
+  background-size: cover;
+  z-index: 1;
+}
+
+/****************** CSS HEADER *********************/
+header {
+  display: flex;
+  background-color: white;
+  height: 6rem;
+  z-index: 5;
+  position: relative;
+}
+
+header #logo {
+  height: 5rem;
+  margin-left: 230px;
+  margin-top: 6px;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  z-index: 5;
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-left: 250px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+
+header nav a:hover {
+  color: rgb(8, 97, 152);
+}
+
+/****************** CSS MAIN ********************/
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container {
+  height: 6rem;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+
+}
+
+.top-container h3 {
+  color: white;
+  margin-left: 230px;
+}
+
+.bottom-container {
+  background-color: rgb(8, 97, 152);
+  position: relative;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 5;
+}
+
+.bottom-container ul {
+  gap: 1rem;
+  list-style: none;
+  color: white;
+  display: flex;
+}
+
+.bottom-container li {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.bottom-container #img1,
+.bottom-container #img2,
+.bottom-container #img3,
+.bottom-container #img4,
+.bottom-container #img5 {
+  height: 3rem;
+}
+
+/****************** CSS FOOTER *******************/
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: start;
+  gap: 80px;
+  padding: 40px 0;
+  z-index: 5;
+  margin-left: 230px;
+}
+
+.footer-top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-top li {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-top ul h3 {
+  color: white;
+}
+
+.footer-bottom {
+  height: 6rem;
+  background-color: #353535;
+  z-index: 5;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.footer-bottom button {
+  color: white;
+  background-color: #353535;
+  border: solid 4px rgb(8, 97, 152);
+  padding: 8px;
+  margin-left: 230px;
+}
+
+.footer-bottom h3 {
+  color: rgb(8, 97, 152);
+  margin-left: 540px;
+  padding-right: 60px;
+}
+
+.footer-bottom #foot1,
+.footer-bottom #foot2,
+.footer-bottom #foot3,
+.footer-bottom #foot4,
+.footer-bottom #foot5 {
+  padding: 7px;
+
+
+}
