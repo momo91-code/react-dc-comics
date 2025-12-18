@@ -1,10 +1,24 @@
-
+import comics from "../components/comics"
 
 function Main() {
 	return (
 		<main className="main-wrapper">
+			<h3 className="title">CURRENT SERIES</h3>
 			<div className="top-container">
-				<h3>-- Content goes here --</h3>
+				{comics.map((comic, index) => {
+					if (index >= 12) return null;
+					return (
+						<div key={comic.id} className="comic-card">
+							<div className="image-wrapper">
+								<img src={comic.thumb} alt={comic.title} />
+							</div>
+							<h4>{comic.title}</h4>
+						</div>
+					);
+				})}
+				<div className="load-more">
+					<button>LOAD MORE</button>
+				</div>
 			</div>
 			<div className="bottom-container">
 				<ul>
@@ -30,9 +44,10 @@ function Main() {
 					</li>
 				</ul>
 			</div>
-		</main>
+		</main >
 	);
 }
 
 export default Main
+
 

@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
   min-height: 100vh;
   background-image: url(/public/img/footer-bg.jpg);
-  background-size: cover;
+  background-size: contain;
   position: relative;
   background-position: bottom;
 }
@@ -30,16 +30,18 @@ body::after {
 /****************** CSS HEADER *********************/
 header {
   display: flex;
-  background-color: white;
-  height: 6rem;
+  background-image: url('img/jumbotron.jpg');
+  height: 22rem;
   z-index: 5;
   position: relative;
+  background-size: cover;
 }
 
 header #logo {
   height: 5rem;
   margin-left: 230px;
   margin-top: 6px;
+  background-color: white;
 }
 
 header nav {
@@ -47,6 +49,9 @@ header nav {
   display: flex;
   z-index: 5;
   position: relative;
+  background-color: white;
+  width: 100%;
+  height: 6rem;
 }
 
 header nav ul {
@@ -65,27 +70,99 @@ header nav a:hover {
   color: rgb(8, 97, 152);
 }
 
+.activeLink {
+  border-bottom: solid 3px rgb(8, 97, 152);
+  color: rgb(8, 97, 152);
+}
+
 /****************** CSS MAIN ********************/
 
 .main-wrapper {
+  width: 100%;
+  background-color: black;
+
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
-.top-container {
-  height: 6rem;
-  display: flex;
-  background-color: black;
-  align-items: center;
-  z-index: 5;
-  position: relative;
+.title {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #0c7cec;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 295px;
+}
 
+
+.top-container {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 35px;
+  width: 100%;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  background-color: black;
+  justify-content: center;
 }
 
 .top-container h3 {
+  grid-column: 1 / -1;
+  text-align: center;
   color: white;
-  margin-left: 230px;
+  margin-bottom: 15px;
 }
+
+.comic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.comic-card .image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.comic-card .image-wrapper::before {
+  content: "";
+  display: block;
+  padding-top: 130%;
+}
+
+.comic-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.comic-card h4 {
+  color: white;
+}
+
+.top-container .load-more {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.load-more button {
+  background-color: rgb(8, 97, 152);
+  color: white;
+  padding: 10px 40px;
+  border: solid rgb(8, 97, 152);
+}
+
 
 .bottom-container {
   background-color: rgb(8, 97, 152);
@@ -95,6 +172,7 @@ header nav a:hover {
   align-items: center;
   justify-content: space-around;
   z-index: 5;
+  width: 100%;
 }
 
 .bottom-container ul {
@@ -117,6 +195,8 @@ header nav a:hover {
 .bottom-container #img5 {
   height: 3rem;
 }
+
+*/
 
 /****************** CSS FOOTER *******************/
 .footer-wrapper {
@@ -148,6 +228,12 @@ header nav a:hover {
   cursor: pointer;
 }
 
+.footer-top a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .footer-top ul h3 {
   color: white;
 }
@@ -159,6 +245,7 @@ header nav a:hover {
   align-items: center;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 
