@@ -1,0 +1,81 @@
+/****************** CSS FOOTER *******************/
+.footerWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: start;
+    gap: 80px;
+    padding: 40px 0;
+    z-index: 5;
+    margin-left: 230px;
+}
+
+.footerTop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* mantiene i link in colonna */
+    gap: 12px;
+}
+
+.footerTop li {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footerTop a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footerTop h3 {
+    color: white;
+}
+
+.footerBottom {
+    height: 6rem;
+    background-color: #353535;
+    z-index: 5;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+
+.footerButton {
+    color: white;
+    background-color: #353535;
+    border: solid 4px rgb(8, 97, 152);
+    padding: 8px;
+    margin-left: 230px;
+}
+
+.footerTitle {
+    color: rgb(8, 97, 152);
+    margin-left: 540px;
+    padding-right: 60px;
+}
+
+
+.socialList {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}

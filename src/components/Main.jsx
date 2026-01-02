@@ -1,53 +1,53 @@
-import comics from "../components/comics"
+import comics from "../data/comics";
+import style from "./Main.module.css";
 
 function Main() {
 	return (
-		<main className="main-wrapper">
-			<h3 className="title">CURRENT SERIES</h3>
-			<div className="top-container">
+		<main className={style.mainWrapper}>
+			<h3 className={style.title}>CURRENT SERIES</h3>
+			<div className={style.topContainer}>
 				{comics.map((comic, index) => {
 					if (index >= 12) return null;
 					return (
-						<div key={comic.id} className="comic-card">
-							<div className="image-wrapper">
-								<img src={comic.thumb} alt={comic.title} />
+						<div key={comic.id} className={style.comicCard}>
+							<div className={style.imageWrapper}>
+								<img className={style.comicImage} src={comic.thumb} alt={comic.title} />
 							</div>
-							<h4>{comic.title}</h4>
+							<h4 className={style.comicTitle}>{comic.title}</h4>
 						</div>
 					);
 				})}
-				<div className="load-more">
-					<button>LOAD MORE</button>
+				<div className={style.loadMoreContainer}>
+					<button className={style.loadMoreButton}>LOAD MORE</button>
 				</div>
 			</div>
-			<div className="bottom-container">
-				<ul>
-					<li>
-						<img id="img1" src="/img/buy-comics-digital-comics.png" alt="img" />
+			<div className={style.bottomContainer}>
+				<ul className={style.socialList}>
+					<li className={style.socialItem}>
+						<img className={style.logo1} src="/img/buy-comics-digital-comics.png" alt="img" />
 						<span>DIGITAL COMICS</span>
 					</li>
-					<li>
-						<img id="img2" src="/img/buy-comics-merchandise.png" alt="img" />
+					<li className={style.socialItem}>
+						<img className={style.logo2} src="/img/buy-comics-merchandise.png" alt="img" />
 						<span>DC MERCHANDISE</span>
 					</li>
-					<li>
-						<img id="img3" src="/img/buy-comics-subscriptions.png" alt="img" />
+					<li className={style.socialItem}>
+						<img className={style.logo3} src="/img/buy-comics-subscriptions.png" alt="img" />
 						<span>SUBSCRIPTION</span>
 					</li>
-					<li>
-						<img id="img4" src="/img/buy-comics-shop-locator.png" alt="img" />
+					<li className={style.socialItem}>
+						<img className={style.logo4} src="/img/buy-comics-shop-locator.png" alt="img" />
 						<span>COMIC SHOP LOCATOR</span>
 					</li>
-					<li>
-						<img id="img5" src="/img/buy-dc-power-visa.svg" alt="img" />
+					<li className={style.socialItem}>
+						<img className={style.logo5} src="/img/buy-dc-power-visa.svg" alt="img" />
 						<span>DC POWER VISA</span>
 					</li>
 				</ul>
 			</div>
-		</main >
+		</main>
 	);
 }
 
-export default Main
-
+export default Main;
 
