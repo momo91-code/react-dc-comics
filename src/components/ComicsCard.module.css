@@ -1,0 +1,44 @@
+.topContainer {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 35px;
+    width: 100%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    background-color: black;
+    justify-content: center;
+}
+
+
+.comicCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.imageWrapper::before {
+    content: "";
+    display: block;
+    padding-top: 130%;
+}
+
+.comicImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.comicTitle {
+    color: white;
+    font-weight: lighter;
+}

@@ -1,25 +1,15 @@
 import comics from "../data/comics";
 import style from "./Main.module.css";
+import ComicsCard from "./ComicsCard"
 
 function Main() {
 	return (
 		<main className={style.mainWrapper}>
 			<h3 className={style.title}>CURRENT SERIES</h3>
-			<div className={style.topContainer}>
-				{comics.map((comic, index) => {
-					if (index >= 12) return null;
-					return (
-						<div key={comic.id} className={style.comicCard}>
-							<div className={style.imageWrapper}>
-								<img className={style.comicImage} src={comic.thumb} alt={comic.title} />
-							</div>
-							<h4 className={style.comicTitle}>{comic.title}</h4>
-						</div>
-					);
-				})}
-				<div className={style.loadMoreContainer}>
-					<button className={style.loadMoreButton}>LOAD MORE</button>
-				</div>
+			<ComicsCard comics={comics} />
+
+			<div className={style.loadMoreContainer}>
+				<button className={style.loadMoreButton}>LOAD MORE</button>
 			</div>
 			<div className={style.bottomContainer}>
 				<ul className={style.socialList}>
